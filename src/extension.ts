@@ -12,17 +12,17 @@ export function activate(context: vscode.ExtensionContext) {
 	const onDebug = vscode.debug.onDidChangeActiveDebugSession(session => 
 		{
 			setInterval(() => {
-				vscode.debug.activeDebugSession?.customRequest('pause')
-
-				
+				vscode.debug.activeDebugSession?.customRequest('pause');
 
 
-				vscode.debug.activeDebugSession?.customRequest('continue')
+
+
+				vscode.debug.activeDebugSession?.customRequest('continue');
 
 			}, 1000);	
 
-		};
-	);
+		}
+	)
 	
 }
 
